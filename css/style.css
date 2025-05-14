@@ -1,0 +1,574 @@
+@charset "UTF-8";
+/*======================
+  Fonts
+======================*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+/*======================
+  Variables
+======================*/
+/*======================
+  Mixins
+======================*/
+/*======================
+  Animations
+======================*/
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+@keyframes tremble {
+  0% {
+    transform: translateX(-20%, 40%);
+  }
+  25% {
+    transform: translate(-22%, 40%);
+  }
+  50% {
+    transform: translate(-20%, 40%);
+  }
+  75% {
+    transform: translate(-22%, 40%);
+  }
+  100% {
+    transform: translate(-20%, 40%);
+  }
+}
+@keyframes spread-in {
+  0% {
+    transform: scaleX(0);
+    opacity: 0;
+    transform-origin: left;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+    transform-origin: left;
+  }
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+@keyframes step-color {
+  0% {
+    color: #9356dc;
+  }
+  50% {
+    color: rgb(201, 170.5, 237.5);
+  }
+  100% {
+    color: #9356dc;
+  }
+}
+/*======================
+  Components
+======================*/
+/*======================
+  Général
+======================*/
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+/*======================
+  Header
+======================*/
+header {
+  position: relative;
+  z-index: 10;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+header .logo {
+  padding: 1rem;
+}
+header h1 {
+  font-size: 30px;
+  color: #000;
+  font-family: Shrikhand;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+/*======================
+  Localisation
+======================*/
+.localisation {
+  width: 100%;
+  height: 50px;
+  background-color: #eaeaea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  z-index: 9;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.localisation i {
+  animation: bounce 0.5s ease-in-out infinite alternate;
+}
+
+/*======================
+  Section Explorer
+======================*/
+.explorer {
+  background-color: #f6f6f6;
+  text-align: center;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.explorer button {
+  margin: 1rem;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  background: linear-gradient(90deg, #9356dc 0%, #ff79da 50%, #9356dc 100%);
+  background-size: 300% 100%;
+  animation: gradient-move 5s ease-in-out infinite alternate;
+}
+.explorer button:hover {
+  box-shadow: none;
+  transform: translateY(2px);
+}
+.explorer p {
+  font-weight: 300;
+}
+
+/*======================
+  Fonctionnement
+======================*/
+.fonctionnement {
+  padding: 2rem 1rem;
+}
+.fonctionnement .container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 1rem;
+}
+.fonctionnement .card-list {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 72px;
+  padding-left: 2rem;
+  gap: 20px;
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  animation: spread-in 0.6s ease forwards;
+}
+.fonctionnement .card-list i {
+  color: rgb(126, 126, 126);
+  animation: step-color 5s ease-in-out infinite alternate;
+}
+.fonctionnement .card-list .step {
+  position: absolute;
+  left: -11px;
+  border-radius: 50%;
+  background-color: #9356dc;
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*======================
+  Restaurants
+======================*/
+.restaurants {
+  padding: 2rem 1rem;
+  background-color: #f6f6f6;
+}
+.restaurants .container a {
+  text-decoration: none;
+  color: #000;
+}
+.restaurants .container .card {
+  position: relative;
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 490px;
+  margin: 1rem auto;
+  padding: 0;
+}
+.restaurants .container .card .new {
+  position: absolute;
+  background-color: #99e2d0;
+  color: rgb(0, 135, 102);
+  padding: 0.5rem 1rem;
+  top: 0;
+  right: 0;
+  transform: translate(-20%, 40%);
+  border-radius: 2px;
+  animation: tremble 0.6s ease-in-out infinite alternate;
+}
+.restaurants .container .card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+.restaurants .container .card .informations {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  position: relative;
+}
+.restaurants .container .card .informations p {
+  font-weight: 300;
+  margin: 0;
+}
+.restaurants .container .card .informations h3 {
+  margin: 0;
+}
+.restaurants .container .card .like {
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  transition: opacity 0.3s ease;
+  color: #000000;
+  opacity: 1;
+}
+.restaurants .container .card .like:hover, .restaurants .container .card .like:active {
+  opacity: 0;
+}
+.restaurants .container .card .liked {
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  transition: opacity 0.3s ease;
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  background-clip: text;
+  color: rgba(0, 0, 0, 0);
+  opacity: 0;
+}
+.restaurants .container .card .liked:hover, .restaurants .container .card .liked:active {
+  opacity: 1;
+}
+
+.news {
+  animation: tremble 0.4s ease-in-out infinite alternate;
+}
+
+/*======================
+  Header
+======================*/
+.retour {
+  position: absolute;
+  left: 6%;
+}
+.retour i {
+  font-size: 20px;
+  color: #000;
+}
+
+/*======================
+  Menu principal restaurant
+======================*/
+.hero {
+  height: 275px;
+  overflow: hidden;
+}
+.hero img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.menu {
+  position: relative;
+  top: -30px;
+  padding: 1rem;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  background-color: #f3f3f3;
+  /* Section (entrées, plats, desserts) */
+  /* Titre et favoris */
+  /* Carte plat individuel */
+  /* Titres */
+  /* Séparateur */
+  /* Bouton commander */
+}
+.menu .section {
+  margin: 2rem 0;
+}
+.menu .restaurant {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+  position: relative;
+}
+.menu .restaurant .like {
+  position: absolute;
+  cursor: pointer;
+  font-size: 1.5rem;
+  top: 1rem;
+  transition: opacity 0.3s ease;
+  color: #000000;
+  opacity: 1;
+}
+.menu .restaurant .like:hover, .menu .restaurant .like:active {
+  opacity: 0;
+}
+.menu .restaurant .liked {
+  position: absolute;
+  cursor: pointer;
+  font-size: 1.5rem;
+  top: 1rem;
+  transition: opacity 0.3s ease;
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  background-clip: text;
+  color: rgba(0, 0, 0, 0);
+  opacity: 0;
+}
+.menu .restaurant .liked:hover, .menu .restaurant .liked:active {
+  opacity: 1;
+}
+.menu .card {
+  background-color: #fff;
+  border-radius: 0.8rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 10px;
+  animation: expand-card 0.6s ease forwards;
+}
+.menu .card h4,
+.menu .card p {
+  margin: 0;
+  opacity: 0;
+  animation: fade-text 0.6s ease forwards;
+  animation-delay: 0.6s;
+}
+.menu .card div p {
+  font-weight: 300;
+}
+.menu h2 {
+  font-size: 28px;
+  margin: 1rem 0 0 0;
+  font-family: Shrikhand;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+.menu h3 {
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 0;
+}
+.menu hr {
+  height: 3px;
+  background-color: #99e2d0;
+  border: none;
+  width: 40px;
+  margin: 0.3rem 0 0.8rem 0;
+}
+.menu button {
+  padding: 1rem 3rem !important;
+  display: block;
+  margin: 0 auto;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  background: linear-gradient(90deg, #9356dc 0%, #ff79da 50%, #9356dc 100%);
+  background-size: 300% 100%;
+  animation: gradient-move 5s ease-in-out infinite alternate;
+}
+.menu button:hover {
+  box-shadow: none;
+  transform: translateY(2px);
+}
+
+/*======================
+  Animations
+======================*/
+@keyframes expand-card {
+  0% {
+    width: 0%;
+    opacity: 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+@keyframes fade-text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*======================
+  Responsive
+======================*/
+/* Tablette */
+@media (min-width: 768px) {
+  .menu {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 0;
+  }
+  .menu .section {
+    width: 60%;
+  }
+  .menu .restaurant {
+    gap: 1rem;
+  }
+  .hero {
+    height: 383px;
+  }
+}
+/* Desktop */
+/*======================
+  Footer
+======================*/
+footer {
+  background-color: #353535;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  position: relative;
+  top: 0;
+  margin-top: -30px;
+}
+footer .logo-svg {
+  width: 35%;
+}
+footer ul {
+  padding: 0;
+  margin: 0;
+}
+footer li {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0.5rem 0;
+}
+footer li i {
+  width: 20px;
+  margin: 0 0.5rem 0 0;
+}
+footer li:hover i,
+footer li:hover a, footer li:active i,
+footer li:active a {
+  color: #9356dc;
+}
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
+footer .logo-ecris {
+  font-size: 18px;
+  margin: 1rem 0;
+  font-family: Shrikhand;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+/*======================
+  Responsive
+======================*/
+/* Tablette */
+@media (min-width: 768px) {
+  body {
+    padding: 0;
+  }
+  .fonctionnement .container {
+    flex-direction: row;
+  }
+  .fonctionnement .container .card-list {
+    width: 30%;
+  }
+  .restaurants .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  .restaurants a {
+    width: 45%;
+  }
+  .restaurants .card {
+    flex-grow: 1;
+    width: auto;
+  }
+}
+/* Desktop */
+@media (min-width: 1024px) {
+  .fonctionnement {
+    margin: auto;
+    max-width: 1200px;
+  }
+  .restaurants h2 {
+    margin: auto;
+    max-width: 1200px;
+  }
+  .restaurants .container {
+    margin: auto;
+    max-width: 1200px;
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 100px;
+    padding: 3rem 10rem 1rem;
+  }
+  footer ul {
+    display: flex;
+    gap: 30px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

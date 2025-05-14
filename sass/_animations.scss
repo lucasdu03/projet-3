@@ -1,0 +1,61 @@
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes tremble {
+  0% {
+    transform: translateX(-20%, 40%);
+  }
+  25% {
+    transform: translate(-22%, 40%);
+  }
+  50% {
+    transform: translate(-20%, 40%);
+  }
+  75% {
+    transform: translate(-22%, 40%);
+  }
+  100% {
+    transform: translate(-20%, 40%);
+  }
+}
+
+@keyframes spread-in {
+  0% {
+    transform: scaleX(0);
+    opacity: 0;
+    transform-origin: left;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+    transform-origin: left;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes step-color {
+  0% {
+    color: $color-violet;
+  }
+  50% {
+    color: lighten($color-violet, 20%);
+  }
+  100% {
+    color: $color-violet;
+  }
+}

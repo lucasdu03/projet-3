@@ -1,0 +1,56 @@
+/* Tablette */
+@media (min-width: 768px) {
+  body {
+    padding: 0;
+  }
+  .fonctionnement {
+    .container {
+      flex-direction: row;
+      .card-list {
+        width: 30%;
+      }
+    }
+  }
+  .restaurants {
+    .container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    a {
+      width: 45%;
+    }
+    .card {
+      flex-grow: 1;
+      width: auto;
+    }
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .fonctionnement {
+    margin: auto;
+    max-width: 1200px;
+  }
+  .restaurants h2 {
+    margin: auto;
+    max-width: 1200px;
+  }
+  .restaurants .container {
+    margin: auto;
+    max-width: 1200px;
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 100px;
+    padding: 3rem 10rem 1rem;
+  }
+  footer ul {
+    display: flex;
+    gap: 30px;
+  }
+}

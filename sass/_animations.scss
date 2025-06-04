@@ -7,24 +7,6 @@
   }
 }
 
-@keyframes tremble {
-  0% {
-    transform: translateX(-20%, 40%);
-  }
-  25% {
-    transform: translate(-22%, 40%);
-  }
-  50% {
-    transform: translate(-20%, 40%);
-  }
-  75% {
-    transform: translate(-22%, 40%);
-  }
-  100% {
-    transform: translate(-20%, 40%);
-  }
-}
-
 @keyframes spread-in {
   0% {
     transform: scaleX(0);
@@ -57,5 +39,36 @@
   }
   100% {
     color: $color-violet;
+  }
+}
+
+@keyframes expand-card {
+  0% {
+    width: 0%;
+    opacity: 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes expand-add {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 59px;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

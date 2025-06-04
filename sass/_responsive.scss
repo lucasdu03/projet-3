@@ -1,82 +1,82 @@
-/* Tablette */
+/* Styles pour les tablettes */
 @media (min-width: 768px) {
   body {
-    padding: 0;
+    padding: 0; // Supprime les marges par défaut
   }
 
   #loader .text {
-    font-size: 4rem;
+    font-size: 4rem; // Agrandit le texte du loader
   }
 
   .fonctionnement {
     .container {
-      flex-direction: row;
+      flex-direction: row; // Affiche les éléments en ligne
       .card-list {
-        width: 30%;
+        width: 30%; // Réduit la largeur des cartes
       }
     }
   }
   .restaurants {
     .container {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
+      display: flex; // Active le mode flexbox
+      flex-direction: row; // Aligne les cartes horizontalement
+      flex-wrap: wrap; // Permet le retour à la ligne si nécessaire
+      justify-content: center; // Centre les cartes horizontalement
+      gap: 30px; // Ajoute un espacement entre les cartes
     }
     a {
-      width: 45%;
+      width: 45%; // Définit la largeur des liens contenant les cartes
     }
     .card {
-      flex-grow: 1;
-      width: auto;
+      flex-grow: 1; // Permet aux cartes de s'étendre uniformément
+      width: auto; // Ajuste automatiquement la largeur
     }
   }
   .menu .restaurant {
-    max-width: 460px;
-    justify-content: center;
+    max-width: 460px; // Limite la largeur de la section restaurant
+    justify-content: center; // Centre le contenu horizontalement
   }
   .menu {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 3rem 0;
+    max-width: 1200px; // Limite la largeur totale du menu
+    margin: auto; // Centre le menu horizontalement
+    display: flex; // Active le mode flexbox
+    flex-direction: column; // Aligne les éléments verticalement
+    align-items: center; // Centre les éléments horizontalement
+    padding: 3rem 0; // Ajoute un espacement vertical
     .section {
-      width: 60%;
+      width: 60%; // Réduit la largeur des sections
     }
     .restaurant {
-      gap: 1rem;
+      gap: 1rem; // Ajoute un espacement entre les éléments
     }
   }
   .hero {
-    height: 383px;
+    height: 383px; // Ajuste la hauteur de l'image principale
   }
 }
 
-/* Desktop */
+/* Styles pour les desktops */
 @media (min-width: 1024px) {
   .fonctionnement {
-    margin: auto;
-    max-width: 1200px;
+    margin: auto; // Centre la section fonctionnement
+    max-width: 1200px; // Limite la largeur totale
   }
   .restaurants h2 {
-    margin: auto;
-    max-width: 1200px;
+    margin: auto; // Centre le titre des restaurants
+    max-width: 1200px; // Limite la largeur du titre
   }
   .restaurants .container {
-    margin: auto;
-    max-width: 1200px;
+    margin: auto; // Centre le conteneur des restaurants
+    max-width: 1200px; // Limite la largeur totale
   }
   footer {
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 100px;
-    padding: 3rem 10rem 1rem;
+    display: flex; // Active le mode flexbox
+    flex-direction: row-reverse; // Inverse l'ordre des éléments
+    gap: 100px; // Ajoute un espacement entre les sections
+    padding: 3rem 10rem 1rem; // Ajoute des marges internes au footer
   }
   footer ul {
-    display: flex;
-    gap: 30px;
+    display: flex; // Active le mode flexbox pour la liste
+    gap: 30px; // Ajoute un espacement entre les éléments de la liste
   }
 }

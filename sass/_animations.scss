@@ -1,3 +1,4 @@
+// Animation pour déplacer un dégradé de gauche à droite
 @keyframes gradient-move {
   0% {
     background-position: 0% 50%;
@@ -7,6 +8,26 @@
   }
 }
 
+// Animation pour simuler un tremblement horizontal
+@keyframes tremble {
+  0% {
+    transform: translateX(-20%, 40%);
+  }
+  25% {
+    transform: translate(-22%, 40%);
+  }
+  50% {
+    transform: translate(-20%, 40%);
+  }
+  75% {
+    transform: translate(-22%, 40%);
+  }
+  100% {
+    transform: translate(-20%, 40%);
+  }
+}
+
+// Animation pour étendre un élément à partir de la gauche
 @keyframes spread-in {
   0% {
     transform: scaleX(0);
@@ -20,6 +41,7 @@
   }
 }
 
+// Animation pour un effet de rebond subtil
 @keyframes bounce {
   0%,
   100% {
@@ -30,6 +52,7 @@
   }
 }
 
+// Animation pour changer la couleur du texte par étapes
 @keyframes step-color {
   0% {
     color: $color-violet;
@@ -42,6 +65,7 @@
   }
 }
 
+// Animation pour agrandir un élément de type carte
 @keyframes expand-card {
   0% {
     width: 0%;
@@ -53,6 +77,7 @@
   }
 }
 
+// Animation pour agrandir un élément additionnel (ex : bouton)
 @keyframes expand-add {
   0% {
     width: 0;
@@ -64,6 +89,7 @@
   }
 }
 
+// Animation pour faire apparaître progressivement un texte
 @keyframes fade-text {
   0% {
     opacity: 0;

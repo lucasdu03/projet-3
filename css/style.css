@@ -9,6 +9,23 @@
     background-position: 100% 50%;
   }
 }
+@keyframes tremble {
+  0% {
+    transform: translateX(-20%, 40%);
+  }
+  25% {
+    transform: translate(-22%, 40%);
+  }
+  50% {
+    transform: translate(-20%, 40%);
+  }
+  75% {
+    transform: translate(-22%, 40%);
+  }
+  100% {
+    transform: translate(-20%, 40%);
+  }
+}
 @keyframes spread-in {
   0% {
     transform: scaleX(0);
@@ -399,8 +416,8 @@ header h1 {
   overflow: hidden;
   padding-left: 0.5rem;
 }
-.menu .card h4,
-.menu .card p {
+.menu .card div h4,
+.menu .card div p {
   margin: 0;
   opacity: 0;
   white-space: nowrap;
@@ -515,7 +532,7 @@ footer .logo-ecris {
   letter-spacing: 0%;
 }
 
-/* Tablette */
+/* Styles pour les tablettes */
 @media (min-width: 768px) {
   body {
     padding: 0;
@@ -565,7 +582,7 @@ footer .logo-ecris {
     height: 383px;
   }
 }
-/* Desktop */
+/* Styles pour les desktops */
 @media (min-width: 1024px) {
   .fonctionnement {
     margin: auto;
